@@ -1,0 +1,141 @@
+/* 🌸 Menu de navigation stylisé */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fce4ec; /* Rose pastel */
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 15px;
+    margin: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sommaire {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sommaire li {
+    position: relative;
+}
+
+.sommaire a {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #880e4f; /* Un rose foncé lisible */
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sommaire a:hover {
+    background-color: #f8bbd0;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Ligne de soulignement animée */
+.sommaire a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ad1457;
+    transition: width 0.3s ease;
+}
+
+.sommaire a:hover::after {
+    width: 100%;
+}
+
+
+.thumbnail {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.thumbnail:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center;      /* Centrage vertical si nécessaire */
+    gap: 30px;                /* Espacement entre les images */
+    padding: 40px 20px;
+}
+
+/* 🌟 Adaptation pour mobile */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 10px;
+    }
+
+    .sommaire a {
+        font-size: 16px;
+        padding: 10px 14px;
+    }
+
+    .thumbnails {
+        gap: 20px;  /* Espacement réduit sur mobile */
+        padding: 20px 10px;
+    }
+
+    .thumbnail {
+        width: 80%; /* Largeur des images réduite pour s'adapter à l'écran */
+        height: auto;
+        padding: 15px;
+    }
+
+    .sommaire {
+        flex-direction: column; /* Empile les éléments du menu sur les petits écrans */
+        align-items: center;
+    }
+}
+
+/* 🌟 Adaptation pour très petits écrans (smartphones en portrait) */
+@media (max-width: 480px) {
+    .sommaire a {
+        font-size: 14px; /* Réduit la taille de la police */
+        padding: 8px 12px;
+    }
+
+    .thumbnail {
+        width: 100%; /* Les images prennent toute la largeur disponible */
+        height: auto;
+        padding: 10px;
+    }
+
+    .thumbnails {
+        gap: 15px;
+        padding: 15px 5px;
+    }
+}

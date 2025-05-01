@@ -1,0 +1,101 @@
+/* 🖤 Général */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: #fce4ec; /* Fond bleu-gris */
+    background-attachment: fixed;
+}
+
+/* 🎥 Vidéo d'introduction */
+.video-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🎉 Contenu principal */
+.main-content {
+    padding: 80px 20px 60px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: -60px; /* Décale vers le bas pour que ça colle après la vidéo */
+}
+
+.main-content h1 {
+    font-size: 3.2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.main-content p {
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+/* 🎴 Liste des invités */
+.invites-section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.invites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.invite-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    padding: 30px 20px;
+    border-radius: 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.invite-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 💻 Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .invites-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

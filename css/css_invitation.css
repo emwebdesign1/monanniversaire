@@ -1,0 +1,211 @@
+/* Général */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fce4ec;
+    color: #333;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.sommaire {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.sommaire li {
+    margin: 0 15px;
+}
+
+.sommaire a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #444;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.sommaire a:hover {
+    color: #e91e63;
+    transform: scale(1.1);
+}
+
+/* 🦄 Hero Section */
+.hero {
+    background: url('../photos/fete.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3em;
+}
+
+/* 🎉 Formulaire */
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+#codeForm {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 0.7s ease forwards;
+    opacity: 0;
+}
+
+#codeForm h2 {
+    font-size: 2em;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+#inviteCode {
+    padding: 15px;
+    font-size: 1.2em;
+    border: 2px solid #e91e63;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 60%;
+    transition: border-color 0.3s ease;
+}
+
+#inviteCode:focus {
+    border-color: #FF5722;
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF5722;
+}
+
+#errorMessage {
+    color: #e91e63;
+    margin-top: 10px;
+}
+
+/* Animation pour le formulaire */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Pop-up */
+.popup {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.popup button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f947ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #FF4500;
+}
+
+/* 💻 Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    #inviteCode {
+        width: 80%;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    #codeForm {
+        padding: 20px;
+    }
+
+    #codeForm h2 {
+        font-size: 1.6em;
+    }
+}

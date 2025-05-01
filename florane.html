@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florane</title>
+    <link rel="stylesheet" href="css/css_invitation.css">
+    <link rel="icon" href="photos/logo.jpg" type="image/jpg">
+</head>
+<body>
+
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Entrez votre code d'invitation</h1>
+            <p id="welcomeMessage"></p>
+        </div>
+    </header>
+
+    <main>
+        <section id="codeForm">
+            <h2>Code d'invitation</h2>
+            <input type="text" id="inviteCode" placeholder="Entrez votre code" />
+            <button onclick="checkCode()">Valider</button>
+            <p id="errorMessage" style="display: none;">Code incorrect, :/ veuillez réessayer.</p>
+        </section>
+    </main>
+
+    <script src="js/js_invitations.js"></script>
+</body>
+</html>
