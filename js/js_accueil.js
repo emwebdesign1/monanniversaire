@@ -22,3 +22,9 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+document.getElementById('playButton').onclick = function() {
+    var video = document.getElementById('introVideo');
+    video.play();
+    video.muted = false; // Désactive le mute quand l'utilisateur clique
+};
